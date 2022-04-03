@@ -15,6 +15,10 @@ public enum TestmanErrorCodes {
     PROD_NOT_FOUND,
     FAILED_TO_DELETE_PRODUCT,
 
+    // test category
+    TEST_CATEGORY_NOT_FOUND,
+    FAILED_TO_DELETE_TESTCATEGORY,
+
     //test related coded
     TEST_NOT_FOUND,
 

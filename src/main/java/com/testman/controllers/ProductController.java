@@ -87,6 +87,5 @@ public class ProductController {
     })
     public void deleteAProduct(@PathVariable long id) throws Exception {
         productService.deleteProduct(id);
-        return;
     }
 }

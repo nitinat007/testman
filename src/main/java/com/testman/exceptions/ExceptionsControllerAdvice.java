@@ -10,6 +10,7 @@ import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
 import static com.testman.exceptions.ErrorModels.ErrorModel;
+import static com.testman.exceptions.ErrorModels.MinimalErrorModel;
 
 /**
  * Author: kunitin
@@ -29,7 +30,6 @@ public class ExceptionsControllerAdvice extends ResponseEntityExceptionHandler {
 
     //This way we can override a default behaviour
     @Override
-
     protected ResponseEntity<Object> handleMethodArgumentNotValid(MethodArgumentNotValidException ex, HttpHeaders headers, HttpStatus status, WebRequest request) {
         ErrorModel error = new ErrorModel("Request Argument not valid. Check request body. ", TestmanErrorCodes.TESTMAN_CLIENT_ERROR, ex.getFieldError().getDefaultMessage());
         logger.error(error);
